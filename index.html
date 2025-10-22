@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Informasi Profil</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f8fafc;
+      color: #333;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      background: #007bff;
+      color: white;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar .container {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(90deg, #007bff, #00bfff);
+      color: white;
+      text-align: center;
+      padding: 5rem 1rem;
+    }
+    .hero-content {
+      max-width: 700px;
+      margin: auto;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: white;
+      color: #007bff;
+      padding: 10px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background: #e3e3e3;
+    }
+
+    /* ===== FITUR ===== */
+    .features {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .feature-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      width: 250px;
+    }
+    .feature-card h3 {
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    /* ===== ABOUT ===== */
+    .about {
+      background: #eaf3ff;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    /* ===== PROFILE ===== */
+    .profiles {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .form-container {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 400px;
+      margin: auto;
+      padding: 1rem;
+    }
+    input, textarea {
+      width: 100%;
+      margin: 5px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .profile-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 250px;
+      padding: 1rem;
+    }
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact {
+      text-align: center;
+      background: #f0f7ff;
+      padding: 3rem 1rem;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #007bff;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">ProfilKu</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#features">Fitur</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#profiles">Profil</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Selamat Datang di Sistem Informasi Profil</h2>
+      <p>Tempat terbaik untuk menampilkan dan mengelola informasi profil Anda dengan mudah dan menarik.</p>
+      <a href="#profiles" class="btn">Lihat Profil Sekarang</a>
+    </div>
+  </section>
+
+  <!-- ===== FITUR SECTION ===== -->
+  <section id="features" class="features">
+    <h2>Fitur Unggulan</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Tambah Profil</h3>
+        <p>Tambahkan data profil baru dengan mudah dan cepat.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Edit Profil</h3>
+        <p>Ubah informasi profil kapan saja sesuai kebutuhan Anda.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Hapus Profil</h3>
+        <p>Hapus data profil yang tidak dibutuhkan dengan sekali klik.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="about">
+    <h2>Tentang Aplikasi</h2>
+    <p>Aplikasi Sistem Informasi Profil ini dikembangkan menggunakan HTML, CSS, dan JavaScript murni.
+      Tujuannya untuk membantu pengguna mengelola data profil tanpa perlu database atau server tambahan.
+      Data disimpan di browser menggunakan Local Storage.</p>
+  </section>
+
+  <!-- ===== PROFILE SECTION ===== -->
+  <section id="profiles" class="profiles">
+    <h2>Manajemen Profil</h2>
+    <div class="form-container">
+      <input type="hidden" id="editIndex">
+      <input type="text" id="nama" placeholder="Nama Lengkap">
+      <input type="email" id="email" placeholder="Email">
+      <textarea id="bio" placeholder="Deskripsi singkat..."></textarea>
+      <input type="text" id="foto" placeholder="URL Foto (opsional)">
+      <button onclick="simpanProfil()">Simpan Profil</button>
+    </div>
+    <div class="profile-list" id="profileList"></div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="contact">
+    <h2>Hubungi Kami</h2>
+    <p>📧 Email: info@profilku.com</p>
+    <p>📞 Telepon: +62 812 3456 7890</p>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 ProfilKu | Dibuat dengan ❤️ oleh Ica Amelia</p>
+  </footer>
+
+  <script>
+    let profilData = JSON.parse(localStorage.getItem("profilData")) || [];
+
+    function tampilkanProfil() {
+      const list = document.getElementById("profileList");
+      list.innerHTML = "";
+      profilData.forEach((p, index) => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <img src="${p.foto || 'https://via.placeholder.com/100'}" alt="${p.nama}">
+          <h3>${p.nama}</h3>
+          <p><b>Email:</b> ${p.email}</p>
+          <p>${p.bio}</p>
+          <button onclick="editProfil(${index})">Edit</button>
+          <button onclick="hapusProfil(${index})" style="background:red;">Hapus</button>
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    function simpanProfil() {
+      const nama = document.getElementById("nama").value;
+      const email = document.getElementById("email").value;
+      const bio = document.getElementById("bio").value;
+      const foto = document.getElementById("foto").value;
+      const index = document.getElementById("editIndex").value;
+
+      if (nama === "" || email === "") {
+        alert("Nama dan email wajib diisi!");
+        return;
+      }
+
+      const data = { nama, email, bio, foto };
+
+      if (index === "") {
+        profilData.push(data);
+      } else {
+        profilData[index] = data;
+        document.getElementById("editIndex").value = "";
+      }
+
+      localStorage.setItem("profilData", JSON.stringify(profilData));
+      tampilkanProfil();
+
+      document.getElementById("nama").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("bio").value = "";
+      document.getElementById("foto").value = "";
+    }
+
+    function editProfil(index) {
+      const p = profilData[index];
+      document.getElementById("nama").value = p.nama;
+      document.getElementById("email").value = p.email;
+      document.getElementById("bio").value = p.bio;
+      document.getElementById("foto").value = p.foto;
+      document.getElementById("editIndex").value = index;
+    }
+
+    function hapusProfil(index) {
+      if (confirm("Hapus profil ini?")) {
+        profilData.splice(index, 1);
+        localStorage.setItem("profilData", JSON.stringify(profilData));
+        tampilkanProfil();
+      }
+    }
+
+    tampilkanProfil();
+  </script>
+</body>
+</html>
